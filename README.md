@@ -381,7 +381,7 @@ The Network Traffic Analyzer successfully demonstrates the implementation of liv
 
 ## Project Screenshots
 
-Store the following screenshots inside the **screenshots** folder for documentation purposes:
+Store the following screenshots inside the **screenshots** folder for documentation purposes.
 
 ```text
 screenshots/
@@ -400,11 +400,12 @@ screenshots/
 12_graph_generation.png
 13_wireshark_capture.png
 14_wireshark_tcp_capture.png
-15_wireshark_udp_capture.png
-16_wireshark_dns_capture.png
----
-
+15_wireshark_udp.png
+16_wireshark_dns.png
+```
 
 These screenshots document the complete workflow of the application, including project structure, packet capture, traffic analysis, graph generation, and Wireshark-based packet verification.
+
+---
 
 **End of Document**
