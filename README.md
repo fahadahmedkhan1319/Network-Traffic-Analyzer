@@ -49,6 +49,13 @@ The objectives of this project are:
 | Datetime Module | Timestamp Generation |
 | OS Module | File and Directory Management |
 | Visual Studio Code | Development Environment |
+ | Wireshark | Packet Analysis and Traffic Verification |
+ 
+ # Wireshark Integration
+
+Wireshark was used during the testing phase to validate the packets captured by the Python-based Network Traffic Analyzer. It was used to inspect TCP, UDP, and DNS traffic and verify that the packet information matched the data captured by the application.
+
+The primary packet capturing, analysis, CSV storage, and graph generation functionalities were implemented using Python, while Wireshark served only as a protocol verification and packet inspection tool.
 
 ---
 
@@ -67,8 +74,12 @@ Packet_Sniffer_Project/
 |-- data/
 |   |-- packets.csv
 
-|-- graphs/
-|   |-- protocol_graph.png
+graphs/
+|-- protocol_distribution_bar.png
+|-- protocol_distribution_pie.png
+|-- top_source_ips.png
+|-- top_destination_ports.png
+|-- packet_size_distribution.png
 
 |-- screenshots/
 ```
@@ -183,8 +194,8 @@ The application displays the following menu:
 1. Capture Live Packets
 2. Analyze Saved Packets
 3. Generate Graph
-
-Enter your choice (1, 2 or 3):
+4. Exit
+Enter your choice (1-4):
 ```
 
 ---
@@ -230,12 +241,17 @@ The analysis includes:
 
 ## 3. Graph Generation Module
 
-The visualization module generates a bar chart representing protocol distribution.
+The visualization module generates multiple graphical representations of the captured network traffic using Matplotlib.
 
-The graph is automatically saved as:
+It generates:
 
-```text
-graphs/protocol_graph.png
+Protocol Distribution (Bar Chart)
+Protocol Distribution (Pie Chart)
+Top 5 Source IP Addresses
+Top 5 Destination Ports
+Packet Size Distribution
+
+All graphs are automatically saved inside the graphs folder.
 ```
 
 ---
@@ -294,7 +310,11 @@ data/
 
 graphs/
 
-    protocol_graph.png
+protocol_distribution_bar.png
+protocol_distribution_pie.png
+top_source_ips.png
+top_destination_ports.png
+packet_size_distribution.png
 ```
 
 ---
@@ -366,17 +386,25 @@ Store the following screenshots inside the **screenshots** folder for documentat
 ```text
 screenshots/
 
-menu.png
-
-packet_capture.png
-
-analysis.png
-
-protocol_graph.png
-```
-
-These screenshots can be included in the project report and presentation to demonstrate the application's functionality.
-
+01_project_files.png
+02_main_menu.png
+03_packet_capture.png
+04_analysis_output.png
+05_packets_csv.png
+06_protocol_distribution_bar.png
+07_protocol_distribution_pie.png
+08_top_source_ips.png
+09_top_destination_ports.png
+10_packet_size_distribution.png
+11_program_start.png
+12_graph_generation.png
+13_wireshark_capture.png
+14_wireshark_tcp_capture.png
+15_wireshark_udp_capture.png
+16_wireshark_dns_capture.png
 ---
+
+
+These screenshots document the complete workflow of the application, including project structure, packet capture, traffic analysis, graph generation, and Wireshark-based packet verification.
 
 **End of Document**
